@@ -1,0 +1,53 @@
+
+.favourite-container{
+  display: flex;
+  padding: 30px;
+  max-width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content:center;
+  align-items: space-around;
+}
+
+.favourite-container {
+    background: linear-gradient(102deg, #a2cf54, #5ea4e5, #e585d0, #e7c86b, #930c52);
+    background-size: 1000% 1000%;
+    -webkit-animation: AnimationName 24s ease infinite;
+    -moz-animation: AnimationName 24s ease infinite;
+    -o-animation: AnimationName 24s ease infinite;
+    animation: AnimationName 24s ease infinite;
+  }
+  @-webkit-keyframes AnimationName {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+  }
+  @-moz-keyframes AnimationName {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+  }
+  @-o-keyframes AnimationName {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+  }
+  @keyframes AnimationName {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+  }
+
+  .list-wrapper{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  .heading_nothing{
+    font-family: "Arial";
+    font-size: 24px;
+
+  }

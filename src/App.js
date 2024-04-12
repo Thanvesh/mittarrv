@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Recipe } from "./pages/Recipe";
+import { SignIn } from "./pages/SignIn"
+import {SignUp} from "./pages/SignUp"
+import Cookies from "js-cookie"
+import Header from "./components/Header";
+import Favourite from "./components/Favourites";
+import { RecipeDetails } from "./pages/RecipeDetails";
+
+
+function isAuthenticated() {
+  // Define your authentication logic here
+  // Example: Check if the user is logged in
+  const jwtToken = Cookies.get('jwt_token');
+  return jwtToken !== undefined;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Header/>
+        <Routes>
+            <Route path="/login" element={<SignIn />} />
+            <Route path="/register" element={<SignUp/>}/>
+            
+            <Route path="/" element={isAuthenticated()?<Recipe />:<Navigate to="/login" replace/>} />
+            <Route path="/Recipe/:id" element={isAuthenticated() ? <RecipeDetails/> : <Navigate to="/login" replace />} exact/>
+            <Route path="/favourite" element={isAuthenticated()?<Favourite />:<Navigate to="/login" replace/>} exact/>
+          
+        </Routes>
+    </BrowserRouter>
   );
 }
 

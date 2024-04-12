@@ -1,0 +1,225 @@
+.login-container {
+    height: 90vh;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #540f35;
+    animation: fadeIn 1s ease-in-out; /* Add animation */
+  transition: background-color 0.3s ease; 
+
+  }
+
+  .login-container:hover {
+    background-color: #6a1f4d; /* Change background color on hover */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .login-container:hover .login-form-container {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Add box shadow on form container on hover */
+  }
+
+  .signin-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+  }
+
+
+
+  .login-form-container {
+    width: 60%;
+    max-width: 400px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: #ebe9f0;
+    box-shadow: 0px 4px 16px 0px #000000;  
+    height: 440px;
+    padding: 30px 50px 30px 50px;
+    border:1px solid #8d80c5;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .login-heading {
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #fffefe;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .login-label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 16px;
+    color: #101010;
+    margin-bottom: 8px;
+  }
+
+  .signup{
+    color: #e50914;
+  }
+
+  .login-input1 {
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border:1px solid #032c63;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #0b0b0b;
+    outline: none;
+    margin-bottom: 16px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px 0px #000000;  
+  }
+  .login-input2 {
+    height: 30px;
+    background-color: #fffdfd;
+    border-radius: 2px;
+    border:1px solid #032c63;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 24px;
+    color: #0a0a0a;
+    outline: none;
+    margin-bottom: 12px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px 0px #000000;  
+   
+  }
+
+  input:focus{
+    outline: none;
+    border-color: dodgerblue;
+    
+
+  }
+  .sucs-msg{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0px;
+    line-height: 15px;
+    color: #00ca07;
+    margin-bottom: 12px;
+    text-align: center;
+  
+    padding: 10px;
+    font-weight: 600;
+
+
+  }
+
+  .err-msg {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0px;
+    line-height: 15px;
+    color: #dc2626;
+    margin-bottom: 12px;
+    text-align: center;
+  
+    padding: 10px;
+    font-weight: 600;
+
+  }
+  .sign-in-btn {
+    padding: 8px 20px;
+    background: #e50914;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 1px 5px 16px 0px #000000;
+    transition: transform 0.5s ease-in-out; /* Add transition property */
+
+  }
+  
+  .sign-in-btn:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+  }
+  
+  .sign-in-btn:active {
+    transform: scale(0.95); /* Scale down slightly when clicked */
+  }
+  
+  @media (max-width: 768px) {
+    .login-container {
+      padding: auto;
+    }
+    .login-heading {
+      margin-bottom: 20px;
+      
+    }
+    .login-input1 {
+      margin-bottom: 24px;
+    }
+  
+    .login-label {
+      font-size: 15px;
+
+      
+    }
+
+  
+  
+    .err-msg {
+      font-size: 10px;
+    }
+
+    .sucs-msg{
+      font-size: 10px;
+
+    }
+
+    .signup{
+      font-size: 10px;
+    }
+    .signup-text{
+      font-size: 10px;
+      
+    }
+    .sign-in-btn{
+      text-overflow:unset;
+    }
+  }
