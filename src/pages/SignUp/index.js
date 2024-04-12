@@ -31,7 +31,7 @@ export class SignUp extends Component {
     event.preventDefault();
     const { name, email, password } = this.state;
     const userDetails = { name, email, password };
-    const response = await fetch('http://localhost:3000/api/auth/register', {
+    const response = await fetch('https://mittarrv-1.onrender.com/api/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
