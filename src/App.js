@@ -7,6 +7,7 @@ import Cookies from "js-cookie"
 import Header from "./components/Header";
 import Favourite from "./components/Favourites";
 import { RecipeDetails } from "./pages/RecipeDetails";
+import { Home } from "./pages/Home";
 
 
 function isAuthenticated() {
@@ -23,10 +24,11 @@ function App() {
         <Routes>
             <Route path="/login" element={<SignIn />} />
             <Route path="/register" element={<SignUp/>}/>
-            
-            <Route path="/" element={isAuthenticated()?<Recipe />:<Navigate to="/login" replace/>} />
+            <Route path="/" element={isAuthenticated()?<Home />:<Navigate to="/login" replace/> } />
+            <Route path="/Recipe" element={isAuthenticated()?<Recipe />:<Navigate to="/login" replace/> } />
             <Route path="/Recipe/:id" element={isAuthenticated() ? <RecipeDetails/> : <Navigate to="/login" replace />} exact/>
             <Route path="/favourite" element={isAuthenticated()?<Favourite />:<Navigate to="/login" replace/>} exact/>
+
           
         </Routes>
     </BrowserRouter>

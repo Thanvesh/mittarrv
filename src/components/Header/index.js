@@ -19,7 +19,7 @@ const Header=()=>{
 
 return(
     <div className="header-container">
-        <Link to="/"  className="header-link"> 
+        <Link to="/Recipe"  className="header-link"> 
         <div className="logo-container">
             <FontAwesomeIcon className="header-icon" icon={faBookOpen} />
         <h1 className="logo-title">Recipe Store</h1>

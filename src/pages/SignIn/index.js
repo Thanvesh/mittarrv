@@ -59,7 +59,7 @@ export class SignIn extends Component {
     const { email, password, errMsg, redirectToHome } = this.state;
     const jwtToken = Cookies.get('jwt_token');
     if (jwtToken !== undefined || redirectToHome) {
-      return <Navigate to="/" replace />;
+      return <Navigate to="/Recipe" replace />;
     }
 
     return (

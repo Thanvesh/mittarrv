@@ -31,7 +31,7 @@ export const RecipeDetails = () => {
 
     useEffect(() => {
         getRecipeData();
-    }, [getRecipeData]);
+    }, []);
 
     const handleTryAgain = () => {
         getRecipeData();
